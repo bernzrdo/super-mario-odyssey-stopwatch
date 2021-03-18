@@ -1,0 +1,130 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'FOT-RodinBokutoh Pro', sans-serif;
+    margin: 0;
+    background-color: #f00;
+    background-image: url(img/background.jpg);
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: 50% 0;
+    color: #fff;
+    transition: background-color 1s, background-position 1s;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#time {
+    font-size: 100px;
+}
+
+.kingdom {
+    display: inline-block;
+    width: 303px;
+    height: 69px;
+    padding: 25px;
+    margin: 25px;
+    text-align: left;
+    transition: transform .5s, box-shadow .5s;
+}
+
+.kingdom.completing {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgba(0,0,0,.25);
+}
+
+.kingdom .image {
+    width: 115px;
+    margin-right: 25px;
+    float: left;
+    background-size: cover;
+    background-position: center;
+}
+
+.kingdom .name {
+    position: absolute;
+}
+
+.kingdom .start {
+    position: absolute;
+    transform: translateY(23px);
+    opacity: .5;
+    font-size: 12px;
+}
+
+.kingdom .time {
+    position: absolute;
+    transform: translateY(40px);
+    opacity: .75;
+}
+
+#cap {background-color: #262624}
+#cascade {background-color: #3DBB53}
+#sand {background-color: #DE4D43}
+#lake {background-color: #56A2B7}
+#wooded {background-color: #B41D36}
+#cloud {background-color: #5F83B4}
+#lost {background-color: #71202B}
+#metro {background-color: #757377}
+#snow {background-color: #6F7F8A}
+#seaside {background-color: #B39B5F}
+#luncheon {background-color: #9E81CF}
+#ruined {background-color: #2B2830}
+#bowsers {background-color: #2A2C3C}
+#moon {background-color: #000000}
+
+#cap .image {background-image: url(img/cap.jpg)}
+#cascade .image {background-image: url(img/cascade.jpg)}
+#sand .image {background-image: url(img/sand.jpg)}
+#lake .image {background-image: url(img/lake.jpg)}
+#wooded .image {background-image: url(img/wooded.jpg)}
+#cloud .image {background-image: url(img/cloud.jpg)}
+#lost .image {background-image: url(img/lost.jpg)}
+#metro .image {background-image: url(img/metro.jpg)}
+#snow .image {background-image: url(img/snow.jpg)}
+#seaside .image {background-image: url(img/seaside.jpg)}
+#luncheon .image {background-image: url(img/luncheon.jpg)}
+#ruined .image {background-image: url(img/ruined.jpg)}
+#bowsers .image {background-image: url(img/bowsers.jpg)}
+#moon .image {background-image: url(img/moon.jpg)}
+
+#pause {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+    transform: scale(1.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .1s, opacity .1s;
+    z-index: 999;
+}
+
+#pause.on {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#pause div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 250px;
+    background-color: #fff;
+}
+
+#pause div:first-child {transform: translate(-50%, -50%) translateX(-75px)}
+#pause div:last-child {transform: translate(-50%, -50%) translateX(75px)}
